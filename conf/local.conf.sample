@@ -1,49 +1,29 @@
-# Local configuration for meta-rpi images
-# Yocto Project 2.4 Poky distribution [rocko] branch
-# This is a sysvinit system
+MACHINE = "raspberrypi0-wifi"
+DL_DIR = "${HOME}/source/downloads"
 
-LICENSE_FLAGS_WHITELIST = "commercial"
+DISTRO ?= "myke"
+SDKMACHINE ?= "i686"
 
-PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
-PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
+EXTRA_IMAGE_FEATURES ?= "debug-tweaks"
+USER_CLASSES ?= "buildstats image-mklibs image-prelink"
 
-MACHINE_FEATURES_remove = "apm"
-IMAGE_FSTYPES = "tar.xz"
-PREFERRED_VERSION_linux-raspberrypi = "4.9.%"
+PATCHRESOLVE = "noop"
+BB_DISKMON_DIRS ??= "\
+    STOPTASKS,${TMPDIR},1G,100K \
+    STOPTASKS,${DL_DIR},1G,100K \
+    STOPTASKS,${SSTATE_DIR},1G,100K \
+    STOPTASKS,/tmp,100M,100K \
+    ABORT,${TMPDIR},100M,1K \
+    ABORT,${DL_DIR},100M,1K \
+    ABORT,${SSTATE_DIR},100M,1K \
+    ABORT,/tmp,10M,1K"
 
-# Choose the board you are building for
-#MACHINE="raspberrypi"
-#MACHINE="raspberrypi0"
-MACHINE="raspberrypi0-wifi"
-#MACHINE="raspberrypi2"
-#MACHINE = "raspberrypi3"
-#MACHINE="raspberrypi-cm"
-#MACHINE="raspberrypi-cm3"
+PACKAGECONFIG_append_pn-qemu-native = " sdl"
+PACKAGECONFIG_append_pn-nativesdk-qemu = " sdl"
 
-# Choices are Image or zImage if NOT using u-boot (no u-boot is the default)
-# Choices are uImage or zImage if using u-boot, though if you choose zImage
-# with u-boot you will also have to change the boot script boot command
-KERNEL_IMAGETYPE = "zImage"
+CONF_VERSION = "1"
+HDMI_GROUP = "2"
+HDMI_MODE = "29"
 
-#ENABLE_UART="1"
-#DL_DIR = "${HOME}/oe-sources"
-#SSTATE_DIR = "/oe4/rpi/sstate-cache"
-#TMPDIR = "/oe4/rpi/tmp-rocko"
-
-DISTRO = "myke"
-#DISTRO = "poky"
-
-# i686 or x86_64
-SDKMACHINE = "i686"
-
-#EXTRA_IMAGE_FEATURES = "debug-tweaks"
 INHERIT += "extrausers"
 EXTRA_USERS_PARAMS = "usermod -P mykepi root; "
-
-USER_CLASSES = "image-mklibs image-prelink"
-PATCHRESOLVE = "noop"
-
-RM_OLD_IMAGE = "1"
-INHERIT += "rm_work"
-CONF_VERSION = "1"
-

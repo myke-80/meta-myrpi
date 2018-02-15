@@ -6,16 +6,14 @@ BBPATH = "${TOPDIR}"
 BBFILES ?= ""
 
 BBLAYERS ?= " \
-    ${HOME}/source/poky-rocko/meta \
-    ${HOME}/source/poky-rocko/meta-poky \
-    ${HOME}/source/poky-rocko/meta-openembedded/meta-oe \
-    ${HOME}/source/poky-rocko/meta-openembedded/meta-multimedia \
-    ${HOME}/source/poky-rocko/meta-openembedded/meta-networking \
-    ${HOME}/source/poky-rocko/meta-openembedded/meta-perl \
-    ${HOME}/source/poky-rocko/meta-openembedded/meta-python \
-    ${HOME}/source/poky-rocko/meta-qt5 \
-    ${HOME}/source/poky-rocko/meta-raspberrypi \
-    ${HOME}/source/poky-rocko/meta-security \
-    ${HOME}/source/rpi/meta-rpi \
-    ${HOME}/source/myke/meta-myrpi \
+  ${HOME}/source/poky/meta \
+  ${HOME}/source/poky/meta-poky \
+  ${HOME}/source/poky/meta-yocto-bsp \
+  ${HOME}/source/poky/meta-openembedded/meta-oe \
+  ${HOME}/source/poky/meta-openembedded/meta-networking \
+  ${HOME}/source/poky/meta-openembedded/meta-multimedia \
+  ${HOME}/source/poky/meta-openembedded/meta-python \
+  ${HOME}/source/poky/meta-raspberrypi \
+  ${HOME}/source/poky/meta-qt5 \
+  ${HOME}/source/myke/meta-myrpi \
 "
