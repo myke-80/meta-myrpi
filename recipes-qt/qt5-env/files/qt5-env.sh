@@ -7,6 +7,10 @@ export QT_QPA_PLATFORM=eglfs
 
 # physical width and height units are mm
 
+# My dev screen...
+export QT_QPA_EGLFS_PHYSICAL_WIDTH=4927
+export QT_QPA_EGLFS_PHYSICAL_HEIGHT=4089
+
 # for the official Pi 7" touchscreen
 #export QT_QPA_EGLFS_PHYSICAL_WIDTH=155
 #export QT_QPA_EGLFS_PHYSICAL_HEIGHT=86

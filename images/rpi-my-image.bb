@@ -20,6 +20,13 @@ EXTRA_TOOLS = " \
     util-linux \
 "
 
+CONNECTIVITY = " \
+    linux-firmware-bcm43430 \
+    bluez5 \
+    bluez5-testtools \
+    bluez5-noinst-tools \
+"
+
 RPI = " \
     userland \
 "
@@ -34,6 +41,7 @@ QT5 = " \
 
 QT_TEST = " \
 	qt-quick-test \
+    qt-bluetooth \
 "
 
 # Include modules in rootfs
@@ -42,7 +50,8 @@ IMAGE_INSTALL += " \
 	${CORE_EXTRA} \
 	${EXTRA_TOOLS} \
 	${RPI} \
-	${TUNES} \
+  	${TUNES} \
+    ${CONNECTIVITY} \
 	${QT5} \
 	${QT_TEST} \
 "
@@ -52,4 +61,8 @@ disable_respawn() {
     mv "${IMAGE_ROOTFS}/etc/inittab.tmp" "${IMAGE_ROOTFS}/etc/inittab"
 }
 
-ROOTFS_POSTPROCESS_COMMAND += "${@bb.utils.contains('DISTRO_FEATURES', 'sysvinit', " disable_respawn ; ", "", d)}"
+enable_bluetooth_startup() {
+    echo BLUETOOTH_ENABLED=1 > ${IMAGE_ROOTFS}/etc/default/bluetooth
+}
+
+ROOTFS_POSTPROCESS_COMMAND += "enable_bluetooth_startup ; ${@bb.utils.contains('DISTRO_FEATURES', 'sysvinit', " disable_respawn ; ", "", d)}"
