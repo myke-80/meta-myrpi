@@ -54,6 +54,8 @@ do_image_myrpi_sdimg[depends] = " \
 			${@bb.utils.contains('RPI_USE_U_BOOT', '1', 'u-boot:do_deploy', '',d)} \
 			"
 
+do_image_myrpi_sdimg[recrdeps] = "do_build"
+
 # SD card image name
 SDIMG = "${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.myrpi-sdimg"
 

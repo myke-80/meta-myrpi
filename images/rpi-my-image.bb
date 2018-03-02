@@ -25,6 +25,7 @@ CONNECTIVITY = " \
     bluez5 \
     bluez5-testtools \
     bluez5-noinst-tools \
+    bluetooth-start \
 "
 
 RPI = " \
@@ -33,6 +34,7 @@ RPI = " \
 
 TUNES = " \
     psplash \
+    my-os-update \
 "
 
 QT5 = " \

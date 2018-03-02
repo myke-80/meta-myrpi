@@ -8,7 +8,7 @@ PR = "r1"
 
 QT_BT_TARGET_NAME = "qml_scanner"
 
-SRCREV = "676cccf07e262f20fbfbe41b6a8939fe53d639af"
+SRCREV = "c1bacd66bf12701523d5864fc5f18c5b53493b94"
 SRC_URI = "git://github.com/myke-80/qt-bluetooth.git"
 
 S = "${WORKDIR}/git"
