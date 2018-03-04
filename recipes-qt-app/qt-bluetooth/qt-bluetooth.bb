@@ -4,11 +4,11 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
 DEPENDS += "qtdeclarative qtconnectivity"
-PR = "r1"
+PR = "r3"
 
-QT_BT_TARGET_NAME = "qml_scanner"
+QT_BT_TARGET_NAME = "qt-bt-scanner"
 
-SRCREV = "c1bacd66bf12701523d5864fc5f18c5b53493b94"
+SRCREV = "4c06baef291f7bf7b737318e8a0907d0f205074d"
 SRC_URI = "git://github.com/myke-80/qt-bluetooth.git"
 
 S = "${WORKDIR}/git"
