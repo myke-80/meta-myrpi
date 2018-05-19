@@ -13,12 +13,12 @@ SRC_URI = "git://github.com/myke-80/qt-bluetooth.git"
 
 S = "${WORKDIR}/git"
 
-require recipes-qt/qt5/qt5.inc
+require recipes-qt/qt5/qt5.inc recipes-connectivity/bluetooth/bluetooth.inc
 
 do_install() {
 	install -d ${D}${bindir}
 	install -m 0755 ${QT_BT_TARGET_NAME} ${D}${bindir}
 }
 
-FILES_${PN} = "${bindir}"
-RDEPENDS_${PN} = "qtdeclarative-qmlplugins qtconnectivity-qmlplugins"
+FILES_${PN} = "${bindir} ${sysconfdir}"
+RDEPENDS_${PN} = "qtdeclarative-qmlplugins qtconnectivity-qmlplugins "

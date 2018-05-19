@@ -1,5 +1,5 @@
 MACHINE = "raspberrypi0-wifi"
-DL_DIR = "${HOME}/source/downloads"
+DL_DIR = "BASE_PATH/downloads"
 
 DISTRO ?= "myke"
 SDKMACHINE ?= "i686"

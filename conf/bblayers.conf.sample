@@ -6,14 +6,14 @@ BBPATH = "${TOPDIR}"
 BBFILES ?= ""
 
 BBLAYERS ?= " \
-  ${HOME}/source/poky/meta \
-  ${HOME}/source/poky/meta-poky \
-  ${HOME}/source/poky/meta-yocto-bsp \
-  ${HOME}/source/poky/meta-openembedded/meta-oe \
-  ${HOME}/source/poky/meta-openembedded/meta-networking \
-  ${HOME}/source/poky/meta-openembedded/meta-multimedia \
-  ${HOME}/source/poky/meta-openembedded/meta-python \
-  ${HOME}/source/poky/meta-raspberrypi \
-  ${HOME}/source/poky/meta-qt5 \
-  ${HOME}/source/myke/meta-myrpi \
+  BASE_PATH/poky/meta \
+  BASE_PATH/poky/meta-poky \
+  BASE_PATH/poky/meta-yocto-bsp \
+  BASE_PATH/poky/meta-openembedded/meta-oe \
+  BASE_PATH/poky/meta-openembedded/meta-networking \
+  BASE_PATH/poky/meta-openembedded/meta-multimedia \
+  BASE_PATH/poky/meta-openembedded/meta-python \
+  BASE_PATH/poky/meta-raspberrypi \
+  BASE_PATH/poky/meta-qt5 \
+  BASE_PATH/myke/meta-myrpi \
 "

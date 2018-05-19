@@ -43,8 +43,6 @@ QT_TEST = " \
 # Include modules in rootfs
 IMAGE_INSTALL += " \
 	${CORE} \
-	${CORE_EXTRA} \
-	${EXTRA_TOOLS} \
 	${RPI} \
     ${CONNECTIVITY} \
 	${QT5} \

@@ -15,10 +15,3 @@ IMAGE_INSTALL += " \
 	${CORE} \
     ${CORE_EXTRA} \
 	"
-
-disable_respawn() {
-    sed -e 's/S0:12345:respawn/# S0:12345:respawn/' "${IMAGE_ROOTFS}/etc/inittab" > "${IMAGE_ROOTFS}/etc/inittab.tmp"
-    mv "${IMAGE_ROOTFS}/etc/inittab.tmp" "${IMAGE_ROOTFS}/etc/inittab"
-}
-
-ROOTFS_POSTPROCESS_COMMAND += "${@bb.utils.contains('DISTRO_FEATURES', 'sysvinit', " disable_respawn ; ", "", d)}"
