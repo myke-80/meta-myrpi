@@ -1,18 +1,18 @@
 #!/bin/sh
 SCRIPTPATH=$(pwd)/$(dirname "$0")
 
-POKY="da3625c52e1ab8985fba4fc3d133edf92142f182"
-OE="f0a664f2b7ac42fa8832ecc016ddf8b6260ee50e"
-RPI="4bf40b2d322e34a5e3be28486987cc7bbb9125f1"
-QT5="bc20e3dcd0176529740beb59ccf1f170b9f828a8"
+if [ -z "$1" ]; then 
+	echo "Please provide base folder"
+	exit 1
+fi
+if [ ! -d "$1" ]; then 
+	echo "Folde $1 doesn't exists"
+	exit 2
+fi
+
+. ${SCRIPTPATH}/versions.sh
 
 ROOT=${1%/}
-
-if [ -z "$1" ]; then 
-	ROOT=${HOME}/source/yocto-work
-elif [ ! -d "${ROOT}" ]; then
-	ROOT=${HOME}/source/yocto-work
-fi
 
 cd ${ROOT}
 
