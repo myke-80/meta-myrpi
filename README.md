@@ -41,10 +41,10 @@ Scott Ellis (https://github.com/jumpnow), his layers helped me figure out some i
 
 meta                 
 meta-poky            
-meta-yocto-bsp       = "master:da3625c52e1ab8985fba4fc3d133edf92142f182"
+meta-yocto-bsp       = "master:3f5b5c59e727c4553572bce4afad3b9111d75a08"
 meta-oe              
 meta-networking      
 meta-multimedia      
-meta-python          = "master:f0a664f2b7ac42fa8832ecc016ddf8b6260ee50e"
-meta-raspberrypi     = "master:4bf40b2d322e34a5e3be28486987cc7bbb9125f1"
-meta-qt5             = "master:bc20e3dcd0176529740beb59ccf1f170b9f828a8"
+meta-python          = "master:4517d1c695efd0b175f4e7242e1a7bb4361527d9"
+meta-raspberrypi     = "master:3b6549a5e016efe63c9d1463948b9de1ee5d89ed"
+meta-qt5             = "master:1452ed3db4fe692de2f83f195f3e7df1263f593d"
