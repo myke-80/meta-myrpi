@@ -33,15 +33,11 @@ This rpi layer depends on:
 
 This images were installed in a rpi zero w.
 
-## Thanks to
-
-Scott Ellis (https://github.com/jumpnow), his layers helped me figure out some issues I was dealing with.
-
 ## Last build with
 
 meta                 
 meta-poky            
-meta-yocto-bsp       = "master:3f5b5c59e727c4553572bce4afad3b9111d75a08"
+meta-yocto-bsp       = "master:25d3577a616d0a6b0d92cf6d73b322d1c6c7819b"
 meta-oe              
 meta-networking      
 meta-multimedia      

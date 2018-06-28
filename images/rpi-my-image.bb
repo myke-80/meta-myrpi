@@ -27,6 +27,10 @@ CONNECTIVITY = " \
     bluez5-noinst-tools \
 "
 
+AUDIO = " \
+    pulseaudio \
+"
+
 RPI = " \
     userland \
 "
@@ -47,4 +51,5 @@ IMAGE_INSTALL += " \
     ${CONNECTIVITY} \
 	${QT5} \
 	${QT_TEST} \
+    ${AUDIO} \
 "
