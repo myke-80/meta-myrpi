@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 DEPENDS += "qtdeclarative"
 PR = "r2"
 
-SRCREV = "fe5458a714db39bf79be4f53c15a06c7159114bd"
+SRCREV = "59e24d05a5bd383f8435acc595618b26470ddcbc"
 SRC_URI = "git://github.com/myke-80/qt-quick-test.git"
 
 S = "${WORKDIR}/git"
