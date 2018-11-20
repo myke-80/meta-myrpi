@@ -15,8 +15,9 @@ require recipes-qt/qt5/qt5.inc
 
 do_install() {
 	install -d ${D}${bindir}
-	install -m 0755 ${PN} ${D}${bindir}
+	install -m 0755 qt-quick-test ${D}${bindir}
 }
 
 FILES_${PN} = "${bindir}"
+#FILES_${PN} = "/opt"
 RDEPENDS_${PN} = "qtdeclarative-qmlplugins"

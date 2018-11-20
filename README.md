@@ -37,10 +37,10 @@ This images were installed in a rpi zero w.
 
 meta                 
 meta-poky            
-meta-yocto-bsp       = "master:b02f3bfe2fee291a9db85094e5f31b1933acf871"
+meta-yocto-bsp       = "master:bdffa0ce10870f70e0a7ab7636ff0d797df43e3a"
 meta-oe              
 meta-networking      
 meta-multimedia      
-meta-python          = "master:d7d0cc5227d0dc7d3ff91ded9da841d65c3f3632"
-meta-raspberrypi     = "master:30200f75d60a6bd041410ac2cc885c1fadfac132"
-meta-qt5             = "master:5832bf2747a70257eca5c443fd487532d62c90b3"
+meta-python          = "master:c26b10b155cf7873ffc8e966f95fd4abed8230c6"
+meta-raspberrypi     = "master:e1ba4484c0135e12fbbd4b7bab00d9a15d5137f2"
+meta-qt5             = "master:fd1f0f47312e7ee80e5ca65b8b2992cb068b1656"
