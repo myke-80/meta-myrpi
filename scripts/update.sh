@@ -1,14 +1,14 @@
 #!/bin/sh
 
-POKY_BRANCH="thud"
-OE_BRANCH="thud"
-RPI_BRANCH="master"
-QT5_BRANCH="thud"
+POKY_BRANCH="sumo"
+OE_BRANCH="sumo"
+RPI_BRANCH="sumo"
+QT5_BRANCH="sumo"
 
-POKY="94b13882510561b4ab7c08fd0343038c154680a4"
-OE="f1511d254632a34c1deb51f4bf8b8c21e7423f51"
-RPI="f752e9238366db7a6e134bbc00ef1f7697cb7eba"
-QT5="18f82a8b32afa7de52004582c44e694cb5d54d84"
+POKY="64a257fa22126c4a40ff7e03424a404e360ebe1e"
+OE="8760facba1bceb299b3613b8955621ddaa3d4c3f"
+RPI="2d40b000021bc8a9ef7f329ed0ad410f8d227b97"
+QT5="d4e7f73d04e8448d326b6f89908701e304e37d65"
 
 if [ -z "$1" ]; then 
 	echo "Please provide base folder"

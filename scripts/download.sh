@@ -10,40 +10,43 @@ if [ ! -d "$1" ]; then
 	exit 2
 fi
 
-. ${SCRIPTPATH}/versions.sh
+POKY_BRANCH="sumo"
+OE_BRANCH="sumo"
+RPI_BRANCH="sumo"
+QT5_BRANCH="sumo"
 
 ROOT=${1%/}
 
 cd ${ROOT}
 
 if [ ! -d "${ROOT}/poky" ]; then
-	git clone -b master git://git.yoctoproject.org/poky
+	git clone -b ${POKY_BRANCH} git://git.yoctoproject.org/poky
 	cd ${ROOT}/poky
-	git reset --hard ${POKY}
+	git pull
 fi
 
 cd ${ROOT}/poky
 
 if [ ! -d "${ROOT}/poky/meta-openembedded" ]; then
-	git clone -b master git://git.openembedded.org/meta-openembedded
+	git clone -b ${OE_BRANCH} git://git.openembedded.org/meta-openembedded
 	cd ${ROOT}/poky/meta-openembedded
-	git reset --hard ${OE}
+	git pull
 fi
 
 cd ${ROOT}/poky
 
 if [ ! -d "${ROOT}/poky/meta-raspberrypi" ]; then
-	git clone -b master https://github.com/agherzan/meta-raspberrypi.git
+	git clone -b ${RPI_BRANCH} https://github.com/agherzan/meta-raspberrypi.git
 	cd ${ROOT}/poky/meta-raspberrypi
-	git reset --hard ${RPI}
+	git pull
 fi
 
 cd ${ROOT}/poky
 
 if [ ! -d "${ROOT}/poky/meta-qt5" ]; then
-	git clone -b master https://github.com/meta-qt5/meta-qt5
+	git clone -b ${QT5_BRANCH} https://github.com/meta-qt5/meta-qt5
 	cd ${ROOT}/poky/meta-qt5
-	git reset --hard ${QT5}
+	git pull
 fi
 
 if [ ! -d "${ROOT}/build" ]; then

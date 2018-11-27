@@ -37,7 +37,6 @@ QT5 = " \
 
 QT_TEST = " \
 	qt-quick-test \
-    qt-bluetooth \
 "
 
 # Include modules in rootfs
