@@ -10,10 +10,10 @@ if [ ! -d "$1" ]; then
 	exit 2
 fi
 
-POKY_BRANCH="sumo"
-OE_BRANCH="sumo"
-RPI_BRANCH="sumo"
-QT5_BRANCH="sumo"
+POKY_BRANCH="master"
+OE_BRANCH="master"
+RPI_BRANCH="master"
+QT5_BRANCH="master"
 
 ROOT=${1%/}
 
